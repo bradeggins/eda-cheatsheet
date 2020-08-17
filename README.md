@@ -12,7 +12,7 @@ no knowledge -> exposure -> anxiety -> repetition -> understanding
 * Print Working Directory -> **pwd**
 * Terminal Alias -> in ~ directory open .zshrc add **alias mn="cd ~/Dev-Academy/Manaia/"** (mn then takes you to that folder)
 * List long format including hidden files(permissions) **ls -la**
-* Modify file permissions **chmod a+x** (modify all file permissions to )
+* Modify file permissions **chmod a+x** (modify all file permissions to executable ) https://en.wikipedia.org/wiki/Chmod
 
 ## node ##
 * killall node -> Close all running servers
@@ -41,6 +41,8 @@ no knowledge -> exposure -> anxiety -> repetition -> understanding
 * Testing ->
     * beforeAll(() => testDb.migrate.latest())
     * beforeEach(() => testDb.seed.run())
+
+* https://devhints.io/knex
 
 ## handlebars ##
 * {{{ body }}}
