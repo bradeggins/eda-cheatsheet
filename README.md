@@ -60,6 +60,8 @@ https://medium.com/@waelyasmina/a-guide-into-using-handlebars-with-your-express-
 * Only JEDI's PUSH WITH THE FORCE(-f) <-Stop and think!!
 * git merge --abort
 * oh-my-zsh git alias -> https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet
+* ** git config --global core.editor "code --wait"** VSCODE as default editor
+* git config https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
 
 ## heroku ##
 * Set **const port = process.env.PORT || 3000**
