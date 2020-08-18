@@ -27,6 +27,7 @@ no knowledge -> exposure -> anxiety -> repetition -> understanding
 * Multiple select -> **⌘D**
 * Indent/un-indent line -> **⌘[ / ]**
 * Open file using Command Palete -> **⇧⌘P filename**
+* Emmet -> https://docs.emmet.io/cheat-sheet/
 
 ## knex ##
 * **npx i knex sqlite3**
@@ -43,6 +44,7 @@ no knowledge -> exposure -> anxiety -> repetition -> understanding
     * beforeEach(() => testDb.seed.run())
 
 * https://devhints.io/knex
+* https://dbdiagram.io/home
 
 ## handlebars ##
 * {{{ body }}}
@@ -90,6 +92,14 @@ https://medium.com/@waelyasmina/a-guide-into-using-handlebars-with-your-express-
 
 ## sqlite3 ##
 * In terminal **sqlite3 filename** then **.schema** -> show DB Schema - CTRL - D to exit.
+
+## nvm ##
+* List versions of node **nvm ls**
+* Install Long term support version **nvm i --lts**
+* Change Default nvm alis **nvm alias default 12.18.3**
+
+
+
 
 
 
