@@ -28,6 +28,10 @@ no knowledge -> exposure -> anxiety -> repetition -> understanding
 * Indent/un-indent line -> **⌘[ / ]**
 * Open file using Command Palete -> **⇧⌘P filename**
 * Emmet -> https://docs.emmet.io/cheat-sheet/
+* JS Snippets -> https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets
+    * anfn, tab
+    * clg, tab
+    * thenc, tab
 
 ## knex ##
 * **npx i knex sqlite3**
