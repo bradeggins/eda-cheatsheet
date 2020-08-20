@@ -1,116 +1,143 @@
 # eda-cheatsheet
 
-no knowledge -> exposure -> anxiety -> repetition -> understanding 
+no knowledge -> exposure -> anxiety -> repetition -> understanding
 
+## terminal
 
-## terminal ##
-* Quick file contents -> **cat filename** (i.e. cat .gitignore)
-* Quick insert into file -> **echo stuff >> filename** (i.e echo .DS_Store >> .gitignore)
-* New file -> **touch filename** (i.e touch .gitignore)
-* Manual Pages -> **man ls** (Manual pages for ls)
-* Look at ENV variable **printenv**
-* Print Working Directory -> **pwd**
-* Terminal Alias -> in ~ directory open .zshrc add **alias mn="cd ~/Dev-Academy/Manaia/"** (mn then takes you to that folder)
+- Quick file contents -> **cat filename** (i.e. cat .gitignore)
+- Quick insert into file -> **echo stuff >> filename** (i.e echo .DS_Store >> .gitignore)
+- New file -> **touch filename** (i.e touch .gitignore)
+- Manual Pages -> **man ls** (Manual pages for ls)
+- Look at ENV variable **printenv**
+- Print Working Directory -> **pwd**
+- Terminal Alias ->
+
+      in
+      ~ (directory)
+
+      open
+      .zshrc or .bashrc or .bash_profile
+
+      add
+      alias mn="cd ~/Dev-Academy/Manaia/"
+
+      (mn then takes you to that folder)
+
 * List long format including hidden files(permissions) **ls -la**
 * Modify file permissions **chmod a+x** (modify all file permissions to executable ) https://en.wikipedia.org/wiki/Chmod
 
-## node ##
-* killall node -> Close all running servers
-* npm i -> install dependencies
-* npm i -D jest supertest cheerio nodemon (install as dev dependencies)
-* CTRL-C -> stop server
+## node
 
-## vscode ##
-* Mark down preview -> **⇧⌘V**
-* Mark down preview side by side -> **⌘K,V**
-* Hide/show terminal -> **⌘J**
-* Multiple select -> **⌘D**
-* Indent/un-indent line -> **⌘[ / ]**
-* Open file using Command Palete -> **⇧⌘P filename**
-* Emmet -> https://docs.emmet.io/cheat-sheet/
-* JS Snippets -> https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets
-    * anfn, tab
-    * clg, tab
-    * thenc, tab
+- killall node -> Close all running servers
+- npm i -> install dependencies
+- npm i -D jest supertest cheerio nodemon (install as dev dependencies)
+- CTRL-C -> stop server
 
-## knex ##
-* **npx i knex sqlite3**
-* **npx knex init**
-* New migration -> **npx knex migrate:make filename**
-* Apply migrations -> **npx knex migrate:latest**
-* Rollback migrations -> **npx knex migrate:rollback**
+## vscode
 
-* New seed -> **npx knex seed:make filename**
-* Run seed -> **npx knex seed:run**
+- Mark down preview -> **⇧⌘V**
+- Mark down preview side by side -> **⌘K,V**
+- Hide/show terminal -> **⌘J**
+- Multiple select -> **⌘D**
+- Indent/un-indent line -> **⌘[ / ]**
+- Multi-line cursor -> **ALT/OPTION click**
+- Open file using Command Pallet -> **⇧⌘P <filename>**
+- Move line up/down -> **ALT ↑ or ↓**
+- Insert line below -> **CTRL ENTER**
+- Select all occurrences of word -> **CTRL F2**
 
-* Testing ->
-    * beforeAll(() => testDb.migrate.latest())
-    * beforeEach(() => testDb.seed.run())
+- Emmet -> https://docs.emmet.io/cheat-sheet/
+- JS Snippets -> https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets
+  - anfn, tab
+  - clg, tab
+  - thenc, tab
 
-* https://devhints.io/knex
-* https://dbdiagram.io/home
+## knex
 
-## handlebars ##
-* {{{ body }}}
-* {{ variable}}
-* {{> partialname }}
-* {{ #each }} / {{ /each }} -> Loop
-* {{ this }} -> Item in an array
-* {{@index}} -> Array index
+- **npx i knex sqlite3**
+- **npx knex init**``
+- New migration -> **npx knex migrate:make filename**
+- Apply migrations -> **npx knex migrate:latest**
+- Rollback migrations -> **npx knex migrate:rollback**
 
-* You res.render a view in handlebars can include partials.
-* res.render takes an input object
+- New seed -> **npx knex seed:make filename**
+- Run seed -> **npx knex seed:run**
 
-* Article on handlebars with images
-https://medium.com/@waelyasmina/a-guide-into-using-handlebars-with-your-express-js-application-22b944443b65
+- Testing ->
 
-## git ##
-* Only JEDI's PUSH WITH THE FORCE(-f) <-Stop and think!!
-* git merge --abort
-* oh-my-zsh git alias -> https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet
-* ** git config --global core.editor "code --wait"** VSCODE as default editor
-* git config https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
+      beforeAll(() => testDb.migrate.latest())
+      beforeEach(() => testDb.seed.run())
 
-## heroku ##
-* Set **const port = process.env.PORT || 3000**
-* Requires a start script in package.json (i.e "start": "node index.js")
-* **heroku apps:create yourAppName** (added as a git remote view **git remote -v**)
-* Can only push to heroku master. If pushing from another branch to heroku master
-    * **git push heroku localBranch:master**
-* View recent log output **heroku logs --tail**
+- https://devhints.io/knex
+- https://dbdiagram.io/home
 
-## refactoring ##
-* Once confident of test pass before you commit.
-    * Remove console.logs
-    * Good variable names?
-    * Functions less than ~ 8 lines
-    * Duplicate code (DRY)
-    * Function only does one thing
+## handlebars
 
-## git workflow ##
-* Make sure your master is up to date
-* Checkout new branch for feature
-* Feature finished - get latest master, merge in to your branch, resolve conflicts
-* Test and commit
-* Merge your branch into latest master, push and deploy.
+- {{{ body }}}
+- {{ variable}}
+- {{> partialname }}
+- {{ #each }} / {{ /each }} -> Loop
+- {{ this }} -> Item in an array
+- {{@index}} -> Array index
 
-## sqlite3 ##
-* In terminal **sqlite3 filename** then **.schema** -> show DB Schema - CTRL - D to exit.
+- You `res.render` a view in handlebars can include partials.
+- res.render takes an input object
 
-## nvm ##
-* List versions of node **nvm ls**
-* Install Long term support version **nvm i --lts**
-* Change Default nvm alis **nvm alias default 12.18.3**
+- Article on handlebars with images
+  https://medium.com/@waelyasmina/a-guide-into-using-handlebars-with-your-express-js-application-22b944443b65
 
+## git
 
+- Only JEDI's PUSH WITH THE FORCE(-f) <-Stop and think!!
+- `git merge --abort`
+- oh-my-zsh git alias -> https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet
+- `git config --global core.editor "code --wait"` VSCODE as default editor
+- git config https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
 
+## heroku
 
+- Set `const port = process.env.PORT || 3000`
+- Requires a start script in package.json (i.e "start": "node index.js")
+- `heroku apps:create yourAppName` (added as a git remote view `git remote -v`)
+- Can only push to heroku master. If pushing from another branch to heroku master
+  git push heroku localBranch:master
+- View recent log output `heroku logs --tail`
 
+## refactoring
 
+- Once confident of test pass before you commit.
+  - Remove console.logs
+  - Good variable names?
+  - Functions less than ~ 8 lines
+  - Duplicate code (DRY)
+  - Function only does one thing
 
+## git workflow
 
+- Make sure your master is up to date
+- Checkout new branch for feature
+- Feature finished - get latest master, merge in to your branch, resolve conflicts
+- Test and commit
+- Merge your branch into latest master, push and deploy.
 
+## sqlite3
 
+- In terminal `sqlite3 filename` then `.schema` -> `show DB Schema` - CTRL - D to exit.
 
+## nvm
 
+- List versions of node `nvm ls`
+- Install Long term support version `nvm i --lts`
+- Change Default nvm alias `nvm alias default 12.18.3`
 
+## JEST
+
+- to install
+
+  `npm install --save-dev`
+
+- To get Jest to run on save in package.JSON
+
+  `"test" : "jest --watch`
+
+- Cheat sheet **https://devhints.io/jest**
