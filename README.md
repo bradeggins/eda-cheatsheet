@@ -77,6 +77,7 @@ no knowledge -> exposure -> anxiety -> repetition -> understanding
 - {{ variable}}
 - {{> partialname }}
 - {{ #each }} / {{ /each }} -> Loop
+- {{ #if }} / {{ /if }} -> Conditional
 - {{ this }} -> Item in an array
 - {{@index}} -> Array index
 
