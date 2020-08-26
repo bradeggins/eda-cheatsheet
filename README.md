@@ -151,8 +151,11 @@ Component function must being with a captial. You need to import react on every 
 
 Want a child component to change its parent state? Pass function as props to a child component.
 
-onChange
-onClick
+`onChange`
+`onClick`
+`state()`
+`this.setState({})`
+
 
 ### Contolled Form
 
