@@ -55,7 +55,7 @@ no knowledge -> exposure -> anxiety -> repetition -> understanding
 ## knex
 
 - **npx i knex sqlite3**
-- **npx knex init**``
+- **npx knex init**
 - New migration -> **npx knex migrate:make filename**
 - Apply migrations -> **npx knex migrate:latest**
 - Rollback migrations -> **npx knex migrate:rollback**
@@ -142,3 +142,40 @@ no knowledge -> exposure -> anxiety -> repetition -> understanding
   `"test" : "jest --watch`
 
 - Cheat sheet **https://devhints.io/jest**
+
+
+## React
+
+`npx create-react-app my-app-name` - Create new react app.
+Component function must being with a captial. You need to import react on every component, export that component and require that componend in.
+
+### react-router-dom
+
+`npm i -D react-router-dom` - Install react-router-dom as dev dependency.
+
+`import { HashRouter as Router } from 'react-router-dom'` - Wrap your `<App />` in 
+`<Router> <Router />` tags
+
+## Testing Library
+
+`npm i @testing-library/react`
+
+Put the test in the same direcotry as the component
+
+` import { fireEvent, screen, render } from @testing-library`
+
+Use `fireEvent()` on the role you selected.
+
+`let div = screen.getByRole('main')`
+
+`fireEvent.contextMenu(div)`
+
+First priority use `.getByRole()`
+https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles
+https://testing-library.com/docs/guide-which-query
+
+
+
+
+
+
