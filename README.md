@@ -149,6 +149,16 @@ no knowledge -> exposure -> anxiety -> repetition -> understanding
 `npx create-react-app my-app-name` - Create new react app.
 Component function must being with a captial. You need to import react on every component, export that component and require that componend in.
 
+Want a child component to change its parent state? Pass function as props to a child component.
+
+onChange
+onClick
+
+### Contolled Form
+
+Every time variable changes you should update state.
+State is what you will use to POST.
+
 ### react-router-dom
 
 `npm i -D react-router-dom` - Install react-router-dom as dev dependency.
