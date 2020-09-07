@@ -179,13 +179,45 @@ Put the test in the same direcotry as the component
 
 Use `fireEvent()` on the role you selected.
 
-`let div = screen.getByRole('main')`
-
 `fireEvent.contextMenu(div)`
+`fireEvent.click(addButton)`
+`fireEvent.change(input)`
 
-First priority use `.getByRole()`
+First priority use `.getByRole()` `.getByLabelText` for forms.
+
+`let addButton = screen.getByRole('button', { name: /Add/i})`
+`let input = screen.getByLabelText('Add a New Wombat')`
+`fireEvent.change(input, {target: {value: 'James'}})`
+
 https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles
 https://testing-library.com/docs/guide-which-query
+
+
+## Redux
+
+`createStore` in index.js
+Central store of state passed around as props.
+Reducers take an argument of state and action to create a function using a switch statement.
+Must return a new state not a mutated original state.
+`combineReducers` function you can combine several reducers into one.
+
+`import {useState} from redux`
+`const [newWombat, setWombat] = useState("")`
+`setWombat(event.target.value)` using hooks to set state in a functional component.
+
+`const changeWombat = (oldWombat, newWombat) => {
+    store.dispatch(updateWombat(oldWombat, newWombat))
+}`
+
+Refactor actions into their own functions to prevent errors.
+
+`function updateWombat(oldWombat, newWombat){
+    return {type: 'UPDATE_WOMBAT', oldWombat, newWombat}
+}`
+
+
+
+
 
 
 
