@@ -215,6 +215,12 @@ Refactor actions into their own functions to prevent errors.
     return {type: 'UPDATE_WOMBAT', oldWombat, newWombat}
 }`
 
+## React-redux
+
+`import {Provider} from 'react-redux`
+Wrap `<App/>` with `<Provider store={store}/>`
+
+
 
 
 
