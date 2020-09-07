@@ -220,6 +220,19 @@ Refactor actions into their own functions to prevent errors.
 `import {Provider} from 'react-redux`
 Wrap `<App/>` with `<Provider store={store}/>`
 
+Ciders.jsx
+`import {connect} from 'react-redux'`
+Gives us a dispatch function in `this.props.dispatch`
+`export default connect(mapStatetoProps)(Ciders)`
+
+`function mapStateToProps(state){ return { ciders:state.ciders }}`
+This adds an object to our props, so `ciders: state.ciders` is accessible to props.
+Allows us to map global state into props.
+
+
+
+
+
 
 
 
